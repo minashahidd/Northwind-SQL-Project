@@ -1,84 +1,75 @@
-## 📊 Project Overview
+# 🛒 Northwind Sales Analysis (SQL)
 
-### Northwind Sales Analysis (SQL)
+## Project Overview
 
-An end-to-end SQL analysis project using the Northwind relational database to simulate a real-world Data Analyst workflow.
+This project analyses the Northwind sample database to simulate the workflow of a Data Analyst in a commercial environment. Using SQL, the project explores customer purchasing behaviour, product performance, and sales trends to answer real business questions and generate actionable insights.
 
-The objective is to explore customer behaviour, sales performance, and product trends by transforming raw relational data into meaningful business insights.
+**Skills:** SQL • MySQL • Relational Databases • Data Exploration • Joins • Aggregations • Business Analysis
 
-## 🗄️ Database Overview
+---
 
-The database contains multiple connected tables representing a fictional trading company:
+## Part 1 – Database Familiarisation & Exploration
 
-- Customers
-- Orders
-- Order Details
-- Products
-- Categories
-- Suppliers
-- Employees
-- Shippers
+### Objective
 
-### Dataset Summary
+Before analysing the data, the database was explored to understand its structure, relationships, and overall data quality.
+
+### Database Summary
 
 | Table | Records |
-|---|---:|
+|:------|--------:|
 | Customers | 93 |
 | Orders | 830 |
 | Products | 77 |
 | Order Details | 2,155 |
 
-## 🛠️ Skills Demonstrated
+### Core Database Structure
 
-- SQL data exploration
-- Relational database analysis
-- Joins and table relationships
-- Aggregations and business metrics
-- Data quality checks
-- Customer and product analysis
-- Advanced SQL techniques
+The project uses a relational database where multiple tables are connected through primary and foreign keys.
 
-## 🎯 Business Objective
-
-Analyse sales data to answer key business questions:
-
-- Which products generate the most revenue?
-- Who are the highest-value customers?
-- Which categories perform best?
-- What sales trends can support decision-making?
-
-## 🏗️ Database Structure
-
-The Northwind database follows a relational model where tables are connected through primary and foreign keys.
-
-Key relationships:
-
-Customers → Orders  
-- One customer can place multiple orders.
-
-Orders → Order Details  
-- One order can contain multiple products.
-
-Products → Categories  
-- Products are grouped into categories.
-
-## 🏗️ Database Relationships
-
-The analysis uses a relational database structure:
+```
 
 Customers
 
-→ Orders
+    │
 
-→ Order Details
+    ▼
 
-→ Products
+Orders
 
-→ Categories
+    │
 
-Key relationships:
+    ▼
 
-- One customer can place multiple orders.
-- One order can contain multiple products.
-- Products belong to different categories.
-- Revenue is calculated from Unit Price × Quantity × Discount.
+OrderDetails
+
+    │
+
+    ▼
+
+Products
+
+    ├── Categories
+
+    └── Suppliers
+
+```
+
+### Key Findings
+
+- Identified the primary business tables required for sales analysis.
+- Explored table structures using `DESCRIBE`.
+- Validated record counts across the core tables.
+- Mapped relationships between customers, orders, products and categories.
+- Confirmed revenue must be calculated from `UnitPrice × Quantity × (1 - Discount)` rather than using a stored sales column.
+
+### SQL Concepts Applied
+
+- `SHOW TABLES`
+- `DESCRIBE`
+- `COUNT()`
+- Primary Keys
+- Foreign Keys
+- Relational Database Design
+
+---
