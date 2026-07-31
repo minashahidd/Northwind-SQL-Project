@@ -67,9 +67,13 @@ Products → Categories
 The analysis uses a relational database structure:
 
 Customers
+
 → Orders
+
 → Order Details
+
 → Products
+
 → Categories
 
 Key relationships:
