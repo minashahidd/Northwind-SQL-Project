@@ -46,3 +46,35 @@ Analyse sales data to answer key business questions:
 - Who are the highest-value customers?
 - Which categories perform best?
 - What sales trends can support decision-making?
+
+## 🏗️ Database Structure
+
+The Northwind database follows a relational model where tables are connected through primary and foreign keys.
+
+Key relationships:
+
+Customers → Orders  
+- One customer can place multiple orders.
+
+Orders → Order Details  
+- One order can contain multiple products.
+
+Products → Categories  
+- Products are grouped into categories.
+
+## 🏗️ Database Relationships
+
+The analysis uses a relational database structure:
+
+Customers
+→ Orders
+→ Order Details
+→ Products
+→ Categories
+
+Key relationships:
+
+- One customer can place multiple orders.
+- One order can contain multiple products.
+- Products belong to different categories.
+- Revenue is calculated from Unit Price × Quantity × Discount.
