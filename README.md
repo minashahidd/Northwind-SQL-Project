@@ -30,27 +30,16 @@ The project uses a relational database where multiple tables are connected throu
 ```
 
 Customers
-
     │
-
     ▼
-
 Orders
-
     │
-
     ▼
-
 OrderDetails
-
     │
-
     ▼
-
 Products
-
     ├── Categories
-
     └── Suppliers
 
 ```
